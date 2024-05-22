@@ -1,1 +1,385 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #efc045;
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    background-color: #0E3FA9;
+    width: 100vw;
+    height : 5vw;
+    position: relative; 
+   
+}
+a {
+    text-decoration: none;
+}
 
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    left: 0px;
+    top: 80px;
+    padding-top: 10px;
+   
+}
+
+#logo {
+    
+    width: 60vw;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-size: 70vw;
+    background-size: 30vh;
+    position: absolute; 
+    left: 2vw;
+    top: 3vh;
+}
+/************search*************/
+.me-2{
+  width: 20vw;
+  height: 4vh;
+  top: 4vh;
+  left:25vw;
+  position: relative;
+  background-color: #efc045;
+}
+.searchbutton
+{
+  margin-left: 5px;
+  left:45vw;
+  position: relative;
+  background-color: #efc045;
+  border-radius: 10px;
+
+}
+/************burger*********/
+
+
+.burger-wrapper {
+  cursor: pointer;
+}
+#meny {
+    background: #333;
+    width: 10vh;
+    height: 10vh;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(50rem);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+}
+#menyAvPaa {
+    display: none;
+}
+
+#menyAvPaa:checked ~ #meny {
+    transform: translateX(0rem);
+}
+
+#burger {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#burger > div {
+    height: 2px;
+    background-color:#efc045;
+    transition: 0.5s;
+    z-index: 999;
+}
+#logout{
+  top:3vh;
+  right: 3vw;
+  position: absolute;
+  z-index:1 ;
+}
+#menyAvPaa:checked ~ #burger > div {
+  background-color: #fff;
+}
+
+#menyAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+/**********************/
+.profile img {
+    width: 71px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  #container{
+    margin-top: 150px;
+    margin-left :150px ;
+    position: relative;
+    left :7vw;
+    width: 70vw;
+    height: auto;
+}
+
+.movies{
+    margin: right 35px ;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.movie_img{
+    height: 200px;
+    width: 150px;
+}
+
+#filter-buttons{
+  margin-right: 10px;
+  background-color: #efc045;
+  color: #0E3FA9;
+  position: relative;
+  top: 15px;
+  left: 20px;
+  display: flex;
+}
+
+#movie_container{
+     display: flex;
+    position: relative;
+    
+}
+
+#movie_img1{
+  position: absolute;
+  width:18vw;
+  height: 40vh;
+  left:22vw ;
+  top: 29vh;
+  z-index: 1;
+}
+
+#movie_img2{
+  width:70vw;
+  height: 30vh;
+  position: relative;
+  left:15vw ;
+  top:12vh;
+  z-index: 0;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#moviename{
+  position: absolute;
+  color: #ffffff;
+  left:43vw ;
+  top: 30vh;
+  z-index: 1;
+}
+
+#movietime{
+  position: absolute;
+  color: #ffffff;
+  left:47vw ;
+  top: 38vh;
+  z-index: 1;
+}
+
+#movieyear{
+  position: absolute;
+  color: #ffffff;
+  left:43vw ;
+  top: 38vh;
+  z-index: 1;
+}
+
+#m_desc{
+  position: absolute;
+  color: #ffffff;
+  left:43vw ;
+  top: 43vh;
+  width: 42vw;
+}
+#mainact{
+  position: absolute;
+  color: #ffffff;
+  left:43vw ;
+  top: 60vh;
+}
+#maindirect{
+  position: absolute;
+  color: #ffffff;
+  left:43vw ;
+  top: 63vh;
+}
+#moviegenre{
+  position: absolute;
+  color: #ffffff;
+  left:43vw ;
+  top: 66vh;
+}
+button{
+  background-color:#0E3FA9;
+  margin-left: 20px;
+  position: relative;
+  top: 10vh;
+  left:11vw; 
+  width: 10vw;
+  height: 5vh;
+  border-radius: 45%;
+  border : none;
+  }
+button a{
+  color: #efc045;
+}
+
+#search_section{
+  position: relative;
+  left: 20vw;
+  top: 15vh;
+  width:5vw;
+}
+
+.backbtn{
+  position: relative;
+  left: opx;
+  top: 80vh;
+  height: 5vh;
+  width: 10vw;
+  margin-left: 2vw;
+  right: 8vw;
+}
+#moviepublisher{
+  position: absolute;
+  color: #ffffff;
+  left:43vw ;
+  top: 70vh;
+}
+ @media only screen and (min-width:851px){
+
+   .carousel {
+    position: relative;
+    width: 75%;
+    height: 40%;
+   
+  }
+  
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn-outline-primary {
+    position: absolute;
+    z-index: 1;
+    transform: translate(-70%, -70%);
+    bottom: 5%;
+    left: 20%;
+  }
+  
+
+  .main-content {
+    width: calc(100% - 17.361%);
+    margin-left: 250px;
+    position: relative;
+  } 
+
+ 
+  
+
+  .list {
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    bottom: 220px;
+    text-transform: uppercase;
+  }
+  
+  li a.selected, .list li a.selected{
+    opacity: 200%;
+  }
+
+  .list li {
+    margin-right: 20px;
+  }
+  
+  .list li a {
+    transition: all 0.3s ease;
+    font-size: 20px;
+    color: #404F80;
+    opacity: 70%;
+  }
+  
+  a:hover, .list li a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .container {
+    position: absolute;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    bottom: 0;
+  }
+  
+  .my-carousel {
+    display: flex;
+    scroll-snap-align: start;
+  }
+  
+  .my-carousel li {
+    list-style-type: none;
+    margin-right: 32px;
+    scroll-snap-stop: always;
+  }
+
+  .my-carousel li img{
+    max-width: 273px;
+    max-height: 186px;
+    width: auto;
+    height: auto;
+  }
+  .list2{
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width:851px){
+  
+}
